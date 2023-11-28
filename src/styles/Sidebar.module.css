@@ -38,3 +38,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.footer a {
+  color: var(--dark-sea);
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
