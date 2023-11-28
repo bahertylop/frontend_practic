@@ -32,7 +32,7 @@ const Footer = () => {
                 target='_blank'
                 rel="noreferrer"
             > 
-                <svg classNmae="icon">
+                <svg className="icon">
                     <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#instagram`} />
                 </svg> 
             </a>
@@ -42,7 +42,7 @@ const Footer = () => {
                 target='_blank'
                 rel="noreferrer"
             > 
-                <svg classNmae="icon">
+                <svg className="icon">
                     <use xlinkHref={`${process.env.PUBLIC_URL}/vk.svg#vk`} />
                 </svg> 
             </a>

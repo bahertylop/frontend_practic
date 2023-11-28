@@ -5,10 +5,11 @@
 
 .title {
   font-weight: 900;
-  font-size: 119px;
-  line-height: 145px;
+  font-size: 65px;
+  line-height: 125px;
   text-transform: uppercase;
-  color: var(--bg);
+  /*color: var(--bg);*/
+  color: var(--light);
   text-align: center;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .subtitle {
-  line-height: 20px;
+  line-height: 40px;
   text-transform: uppercase;
   color: var(--sea);
 }
@@ -39,12 +40,12 @@
 .image {
   position: relative;
   flex-grow: 1;
-  height: 250px;
+  height: 300px;
 }
 
 .image img {
   position: absolute;
-  bottom: -15%;
+  bottom: 0%;
   right: 10%;
   max-width: unset;
 }

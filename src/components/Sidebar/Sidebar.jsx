@@ -7,26 +7,35 @@ import { ROUTES } from '../../utils/routes';
 
 import LOGO from "../../images/logo.svg";
 import AVATAR from "../../images/avatar.jpg";
+import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
+  const { list } = useSelector(({ categories }) => categories);
+
+  const newCategories = Array.isArray(list) ? list.slice(0, 5) : [];
+
+  console.log("list", newCategories);
   return (
     <section className={styles.sidebar}>
       <div className={styles.title}>CATEGORIES</div>
       <nav>
         <ul className={styles.menu}>
-          <li>
-            <NavLink to={`/categories/${1}`}> 
-              Link
-            </NavLink>
+          {newCategories.map(({ id, name }) => (
+          <li key={id}>
+            <NavLink 
+            className={({ isActive }) => 
+              `${styles.link} ${isActive ? styles.active : ""}`}
+            to={`/categories/${id}`}>{name}</NavLink>
           </li>
+          ))}
         </ul>
       </nav>
 
       <div className={styles.footer} >
-        <a href="/help" target="_blank" classname={styles.link}>
+        <a href="/help" target="_blank" className={styles.link}>
           Help
         </a>
-        <a href="/terms" target="_blank" classname={styles.link} style={{ textDecoration: "underline" }}>
+        <a href="/terms" target="_blank" className={styles.link} style={{ textDecoration: "underline" }}>
           Terms&Conditions
         </a>
       </div>
