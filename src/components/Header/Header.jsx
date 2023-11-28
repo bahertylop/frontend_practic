@@ -40,9 +40,11 @@ const Header = () => {
                     />
                 </div>
 
-                <div className={styles.box}>
+                {false && <div className={styles.box}>
+                    
+                </div>}
 
-                </div>
+
             </form>
 
             <div className={styles.account}>
