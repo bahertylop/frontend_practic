@@ -167,3 +167,12 @@
   height: 50px;
   width: 50px;
 }
+
+.title {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 60px;
+  text-transform: uppercase;
+  /*color: var(--bg);*/
+  color: var(--light);
+}

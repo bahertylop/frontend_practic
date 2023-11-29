@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
-  padding: 24px;
+  padding: 25px;
 }
 
 .logo {
@@ -37,4 +37,14 @@
 
 .socials svg:hover {
   fill: var(--violet);
+}
+
+
+.title {
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 40px;
+  text-transform: uppercase;
+  /*color: var(--bg);*/
+  color: var(--light);
 }

@@ -5,14 +5,15 @@ import styles from '../../styles/Header.module.css';
 import { ROUTES } from '../../utils/routes';
 
 import LOGO from "../../images/logo.svg";
-import AVATAR from "../../images/avatar.jpg";
+import AVATAR from "../../images/avatarka.jpg";
 
 const Header = () => {
   return (
     <div className={styles.header}>
         <div className={styles.logo} >
             <Link to={ROUTES.HOME}>
-                <img src = {LOGO} alt="Stuff" />
+                {/* <img src = {LOGO} alt="Stuff" /> */}
+                <div className={styles.title}>LA $HOP</div>
             </Link>
         </div>
 
