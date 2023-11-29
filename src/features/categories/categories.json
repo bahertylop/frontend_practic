@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Sneakers",
+        "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+        "creationAt": "2023-11-29T10:18:48.000Z",
+        "updatedAt": "2023-11-29T10:18:48.000Z"
+    },
+    {
+        "id": 2,
+        "name": "Gumshoes",
+        "image": "https://www.yoox.com/images/items/17/17749297QG_14_f.jpg?impolicy=crop&amp;width=387&amp;height=490",
+        "creationAt": "2023-11-29T10:18:48.000Z",
+        "updatedAt": "2023-11-29T10:18:48.000Z"
+    },
+    {
+        "id": 3,
+        "name": "Slates",
+        "image": "https://www.yoox.com/images/items/11/11096351MG_14_f.jpg?impolicy=crop&width=387&height=490",
+        "creationAt": "2023-11-29T10:18:48.000Z",
+        "updatedAt": "2023-11-29T10:18:48.000Z"
+    }
+]

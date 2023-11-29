@@ -3,10 +3,7 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 
 import styles from '../../styles/Sidebar.module.css';
-import { ROUTES } from '../../utils/routes';
 
-import LOGO from "../../images/logo.svg";
-import AVATAR from "../../images/avatar.jpg";
 import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
