@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "title": "adidas Originals FORUM LOW",
+        "price": 100,
+        "description": "Кроссовки выполнены из комбинации натуральной и искусственной кожи. Детали: махровая подкладка, трикотажная стелька, резиновая подметка.",
+        "images": [
+            "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705726_1_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705727_2_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705728_3_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705729_4_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705730_5_v1.jpg"
+        ],
+        "creationAt": "2023-11-29T13:28:13.000Z",
+        "updatedAt": "2023-11-29T16:02:21.000Z",
+        "category": {
+            "id": 1,
+            "name": "Sneakers",
+            "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+            "creationAt": "2023-11-29T10:18:48.000Z",
+            "updatedAt": "2023-11-29T10:18:48.000Z"
+        }
+    },
+    {
+        "id": 2,
+        "title": "adidas Originals NITEBALL",
+        "price": 200,
+        "description": "Кроссовки adidas Niteball выполнены из сочетания натуральной кожи и текстиля.",
+        "images": [
+            "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651712_1_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651713_2_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651714_3_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651715_4_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651716_5_v1.jpg"
+        ],
+        "creationAt": "2023-11-29T15:37:49.000Z",
+        "updatedAt": "2023-11-29T16:02:36.000Z",
+        "category": {
+            "id": 1,
+            "name": "Sneakers",
+            "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+            "creationAt": "2023-11-29T10:18:48.000Z",
+            "updatedAt": "2023-11-29T10:18:48.000Z"
+        }
+    },
+    {
+        "id": 3,
+        "title": "adidas Originals OZTRAL",
+        "price": 180,
+        "description": "Натуральная замша, текстиль",
+        "images": [
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788728_1_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788729_2_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788730_3_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788731_4_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788732_5_v1.jpg"
+        ],
+        "creationAt": "2023-11-29T15:44:35.000Z",
+        "updatedAt": "2023-11-29T16:03:00.000Z",
+        "category": {
+            "id": 1,
+            "name": "Sneakers",
+            "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+            "creationAt": "2023-11-29T10:18:48.000Z",
+            "updatedAt": "2023-11-29T10:18:48.000Z"
+        }
+    },
+    {
+        "id": 4,
+        "title": "adidas Originals NMD_S1",
+        "price": 160,
+        "description": "Продолжай традиции NMD в этих кроссовках adidas NMD_R1.",
+        "images": [
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272440_1_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272441_2_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272442_3_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272443_4_v1.jpg",
+            "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272444_5_v1.jpg"
+        ],
+        "creationAt": "2023-11-29T17:16:58.000Z",
+        "updatedAt": "2023-11-29T17:16:58.000Z",
+        "category": {
+            "id": 1,
+            "name": "Sneakers",
+            "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+            "creationAt": "2023-11-29T10:18:48.000Z",
+            "updatedAt": "2023-11-29T10:18:48.000Z"
+        }
+    }
+]
