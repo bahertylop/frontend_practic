@@ -10,7 +10,7 @@ const Home = () => {
     const {products: { list, filtered }, categories} = useSelector(( state ) => state)
 
     useEffect(() => {
-        if (!list.length) return;
+        if (!list || !Array.isArray(list) || list.length === 0) return;
 
         dispatch(filterByPrice(80))
     }, [dispatch, list.length]);

@@ -1,13 +1,22 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from '../Home/Home';
-import {ROUTES} from '../../utils/routes';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProduct, getProductById } from '../../features/products/productOnly.js';
 
 const ProductOnly = () => {
-  <Routes>
-    <Route index element={<Home />}/>
-    <Route path={ROUTES.PRODUCT} element={<ProductOnly />} />
-  </Routes>
+    const dispatch = useDispatch();
+    const { id } = useParams();
+
+    const data = getProductById(parseInt(id, 10))
+    
+    // const { data } = getProduct({ id });
+
+    
+
+    console.log(data);
+    return (
+        <div>ITEM</div>
+    )
 }
 
 export default ProductOnly
