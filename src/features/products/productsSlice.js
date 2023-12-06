@@ -42,7 +42,7 @@ const productsSlice = createSlice({
 
     reducers: {
         filterByPrice: (state, { payload }) => {
-            state.filtered = state.filter(({ price }) => price < payload); 
+            state.filtered = state.list.filter(({ price }) => price < payload); 
         }
     },
 
