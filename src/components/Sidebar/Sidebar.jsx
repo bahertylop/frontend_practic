@@ -36,7 +36,6 @@ const Sidebar = () => {
           Terms&Conditions
         </a>
       </div>
-        
     </section>
   );
 };
