@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Products from "../Products/Products.jsx";
 import Categories from "../Categories/Categories.jsx";
 import { filterByPrice } from "../../features/products/productsSlice.js";
+import Sidebar from "../Sidebar/Sidebar.jsx";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -16,7 +17,9 @@ const Home = () => {
     }, [dispatch, list.length]);
 
     return (
+        
         <>
+            <Sidebar />
             <Poster />
             <Categories products={categories.list} amount={3} title="CATEGORIES" />
             <Products products={list} amount={5} title="IN STOCK" />
