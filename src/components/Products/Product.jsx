@@ -1,0 +1,66 @@
+import React from 'react'
+import styles from "../../styles/Product.module.css";
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../utils/routes';
+
+const SIZES = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5];
+
+const Product = ({ images, title, price, description }) => {
+    const currentImage = images[0];
+
+
+  return (
+    <section className={styles.Product}>
+        <div className={styles.images}>
+            <div 
+                className={styles.current}
+                style={{ backgroundImage: `url(${currentImage})`}}
+            />
+
+            {images.map((image, i) => (
+                <div 
+                    key={i}
+                    className={styles.image}
+                    style={{ backgroundImage: `url(${image})`}}
+                    onClick={() => {}}
+                />
+            ))}      
+        </div>
+        <div className={styles.info}>
+            <h1 className={styles.title}>{title}</h1>
+            <div className={styles.price}>
+                <span>Price: </span> {price}$
+            </div>
+            <div className={styles.color}>
+                <span>Color:</span> Green
+            </div>
+            <div className={styles.sizes}>
+                <span>Sizes:</span>
+                <div className={styles.list}>
+                    {SIZES.map(size => (
+                        <div
+                            onClick={() => {}} 
+                            key={size}
+                            className={`${styles.size}`}>
+                            {size}
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <p className={styles.size}>{description}</p>
+
+            <div className={styles.actions}>
+                <button className={styles.add}>Add to cart</button>
+                <button className={styles.favourite}>Add to favourites</button>
+                <button className={styles.favourite}>
+                    <Link to={ROUTES.HOME}>Return to store</Link>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+  )
+}
+
+export default Product

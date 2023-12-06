@@ -14,12 +14,12 @@
 
 .images {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .current {
-  width: 375px;
-  height: 375px;
+  width: 500px;
+  height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,8 +33,8 @@
 }
 
 .image {
-  width: 90px;
-  height: 90px;
+  width: 125px;
+  height: 125px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,12 +43,14 @@
 }
 
 .title {
-  font-size: 18px;
-  line-height: 22px;
+  margin-left: 20px;
+  font-size: 24px;
+  line-height: 60px;
   font-weight: 500;
 }
 
 .price {
+  margin-left: 20px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -57,8 +59,8 @@
 
 .color,
 .sizes {
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 20px;
+  line-height: 25px;
   text-transform: capitalize;
   display: flex;
   column-gap: 16px;
@@ -67,12 +69,16 @@
 
 .sizes {
   margin: 16px 0;
+  font-size: 16px;
+  line-height: 25px;
 }
 
 .color span,
-.sizes span {
-  font-size: 14px;
-  line-height: 17px;
+.sizes span,
+.price span {
+  margin-left: 20px;
+  font-size: 20px;
+  line-height: 25px;
   color: var(--dark-sea);
 }
 
@@ -84,7 +90,7 @@
 
 .size {
   padding: 4px 8px;
-  border-radius: 8px;
+  border-radius: 8px; 
   background: var(--bg);
   cursor: pointer;
 }
@@ -95,19 +101,28 @@
 }
 
 .description {
-  font-weight: 400;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 500;
   font-size: 12px;
   line-height: 15px;
   color: var(--grey);
 }
 
 .actions {
-  margin-top: 20px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-block-end: 40px;
   display: flex;
   column-gap: 10px;
+  place-items: center;
 }
 
 .favourite {
+  font-size: 20px;
+  line-height: 25px;
   background: var(--dark-sea);
   border-radius: 6px;
 }
@@ -126,7 +141,26 @@
   margin-top: auto;
 }
 
+.add {
+  font-size: 20px;
+  line-height: 25px;
+  cursor: pointer;
+  background: var(--violet);
+}
+
+.favourite:hover, 
+.add:hover {
+  background: #614082;
+}
+
 .add:disabled {
-  cursor: not-allowed;
+  font-size: 20px;
+  line-height: 25px;
+  cursor: pointer;
   background: var(--bg);
+  background: var(--violet);
+}
+
+.container {
+  margin-bottom: 50px; /* Высота пустого места внизу в пикселях */
 }

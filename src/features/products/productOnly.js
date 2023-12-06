@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from 'axios'
 
 import data from "./products.json"
+import {ROUTES} from "../../utils/routes";
 
 
 // export const getProduct = createAsyncThunk(
@@ -18,6 +19,12 @@ import data from "./products.json"
 // );
 
 export const getProductById = (id) => {
+    // const dataLength = Array.isArray(data) ? data.length : Object.keys(data).length;
+    // if (id <= 0 || id >= dataLength) {
+    //     const navigate = useNavigate();
+    //     navigate(ROUTES.HOME);
+    //     return;
+    // }
     const product = data.find((item) => item.id === id);
     return product;
 };
