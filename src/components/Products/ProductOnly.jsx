@@ -14,17 +14,19 @@ const ProductOnly = () => {
 
     const data = getProductById(parseInt(id, 10))
 
-    const { related } = useSelector(({ products }) => products);
+    const { list, related } = useSelector(({ products }) => products);
     
     // const { data } = getProduct({ id });
 
     useEffect(() => {
+        if (!data || !list.length) return;
         if (data) {
             dispatch(getRelatedProducts(data.category.id));
         }
     }, [data, dispatch]);
 
     console.log(data);
+
     return ( 
         <div>
             <Product {...data} />
