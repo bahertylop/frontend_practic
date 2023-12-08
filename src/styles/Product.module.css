@@ -159,9 +159,8 @@
 .add:disabled {
   font-size: 20px;
   line-height: 25px;
-  cursor: pointer;
+  cursor: not-allowed;
   background: var(--bg);
-  background: var(--violet);
 }
 
 .container {

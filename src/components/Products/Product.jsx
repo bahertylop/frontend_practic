@@ -10,7 +10,7 @@ const Product = ({ images, title, price, description }) => {
     //const currentImage = images[0];
 
     const [currentImage, setCurrentImage] = useState();
-    const [currentSize, setCurrentSize] = useState();
+    const [currentSize, setCurrentSize] = useState('');
 
     useEffect(() => {
         if (!images.length) return;
@@ -59,7 +59,7 @@ const Product = ({ images, title, price, description }) => {
             <p className={styles.size}>{description}</p>
 
             <div className={styles.actions}>
-                <button className={styles.add}>Add to cart</button>
+                <button className={styles.add} disabled={!currentSize}>Add to cart</button>
                 <button className={styles.favourite}>Add to favourites</button>
                 <button className={styles.favourite}>
                     <Link to={ROUTES.HOME}>Return to store</Link>
