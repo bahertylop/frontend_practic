@@ -14,13 +14,14 @@
 
 .images {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .current {
   width: 500px;
   height: 500px;
   margin-block-start: 40px;
+  margin-left: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,8 +35,8 @@
 }
 
 .image {
-  width: 125px;
-  height: 125px;
+  width: 141px;
+  height: 141px;
   margin-block-start: 40px;
   background-position: center;
   background-repeat: no-repeat;
