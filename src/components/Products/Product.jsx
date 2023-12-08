@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+
 import styles from "../../styles/Product.module.css";
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/routes';
@@ -6,8 +7,16 @@ import { ROUTES } from '../../utils/routes';
 const SIZES = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5];
 
 const Product = ({ images, title, price, description }) => {
-    const currentImage = images[0];
+    //const currentImage = images[0];
 
+    const [currentImage, setCurrentImage] = useState();
+    const [currentSize, setCurrentSize] = useState();
+
+    useEffect(() => {
+        if (!images.length) return;
+
+        setCurrentImage(images[0]);
+    }, [images])
 
   return (
     <section className={styles.Product}>
@@ -16,15 +25,14 @@ const Product = ({ images, title, price, description }) => {
                 className={styles.current}
                 style={{ backgroundImage: `url(${currentImage})`}}
             />
-
             {images.map((image, i) => (
                 <div 
                     key={i}
                     className={styles.image}
                     style={{ backgroundImage: `url(${image})`}}
-                    onClick={() => {}}
+                    onClick={() => setCurrentImage(image)}
                 />
-            ))}      
+            ))}  
         </div>
         <div className={styles.info}>
             <h1 className={styles.title}>{title}</h1>
@@ -39,9 +47,9 @@ const Product = ({ images, title, price, description }) => {
                 <div className={styles.list}>
                     {SIZES.map(size => (
                         <div
-                            onClick={() => {}} 
+                            onClick={() => setCurrentSize(size)} 
                             key={size}
-                            className={`${styles.size}`}>
+                            className={`${styles.size} ${currentSize === size ? styles.active : ''}`}>
                             {size}
                         </div>
                     ))}
