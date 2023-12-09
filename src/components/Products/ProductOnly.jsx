@@ -23,7 +23,7 @@ const ProductOnly = () => {
         if (data) {
             dispatch(getRelatedProducts(data.category.id));
         }
-    }, [data, dispatch]);
+    }, [data, dispatch, list.length]);
 
     console.log(data);
 

@@ -3,6 +3,8 @@ import { BASE_URL } from "../../utils/constants";
 import axios from 'axios'
 
 
+
+
 // export const getCategories = createAsyncThunk(
 //     'categories/getCategories', 
 //     async(_, thunkAPI) => {
@@ -16,9 +18,9 @@ import axios from 'axios'
 //     }
 // );
 
-// export const getCategories = createAsyncThunk(
+// export const createUser = createAsyncThunk(
 //     'categories/getCategories', 
-//     async(_, thunkAPI) => {
+//     async(payload, thunkAPI) => {
 //         try {
 //             return data;
 //         } catch(err) {
