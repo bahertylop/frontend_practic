@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-
+import { useDispatch, useSelector } from "react-redux";
 import styles from '../../styles/Header.module.css';
 import { ROUTES } from '../../utils/routes';
 
@@ -11,10 +11,19 @@ import { searchProducts } from '../../features/products/productsSlice';
 const Header = () => {
 
     const [searchValue, setSearchValue] = useState("");
+    const [values, setValues] = useState({ name: "Guest", avatar: AVATAR });
+
+    const { currentUser, cart } = useSelector(( { user }) => user);
 
     const handleSearch = ({ target: { value } }) => {
         setSearchValue(value)
     }
+
+    useEffect(() => {
+        if (!currentUser) return;
+    
+        setValues(currentUser);
+      }, [currentUser]);
 
     const searchedProducts = searchProducts(searchValue);
 
@@ -83,7 +92,9 @@ const Header = () => {
                     <svg className={styles["icon-cart"]}>
                         <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`} />
                     </svg>
-                    <span className={styles.count}>2</span>
+                    {cart.length && (
+                        <span className={styles.count}>{cart.length}</span>
+                    )}
                 </Link>
             </div>
 

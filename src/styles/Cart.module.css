@@ -1,5 +1,5 @@
 .cart {
-  width: calc(100% - 324px);
+  width: calc(100%);
   padding: 24px 32px;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   flex-direction: column;
   row-gap: 8px;
   margin-top: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .item {
@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 100px 2fr 1fr 1.5fr 1fr 16px;
   align-items: center;
-  height: 70px;
+  height: 120px;
 }
 
 .image {

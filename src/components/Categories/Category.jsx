@@ -36,9 +36,7 @@ const Category = () => {
     }, [id]);
 
     useEffect(() => {
-        if (!id || !list.length) return;
-
-        const { category } = list.find(( item ) => item.id.toString() === id)
+        
 
         setCategor(products[0].category.name)
     }, [list, id])
