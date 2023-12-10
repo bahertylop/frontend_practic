@@ -3,12 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Home/Home";
 import {ROUTES} from '../../utils/routes';
 import ProductOnly from "../Products/ProductOnly";
+import SingleCategory from "../Categories/SingleCategory";
 
 
 const AppRoutes = () => (
     <Routes>
         <Route index element = {<Home />} />
         <Route path={ROUTES.PRODUCTS} element={<ProductOnly />} />
+        <Route path={ROUTES.CATEGORY} element={<SingleCategory />} />
     </Routes>   
 )
 

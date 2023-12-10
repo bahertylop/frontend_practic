@@ -46,6 +46,10 @@ export function searchProducts(searchText) {
     return results;
   }
 
+export function filterById(targetId) {
+    return products.filter(item => item.category.id.toString() === targetId.id);
+};
+
 
 const productsSlice = createSlice({
     name: "products",
