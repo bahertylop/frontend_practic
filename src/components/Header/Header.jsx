@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from '../../styles/Header.module.css';
@@ -6,8 +6,18 @@ import { ROUTES } from '../../utils/routes';
 
 import LOGO from "../../images/logo.svg";
 import AVATAR from "../../images/avatarka.jpg";
+import { searchProducts } from '../../features/products/productsSlice';
 
 const Header = () => {
+
+    const [searchValue, setSearchValue] = useState("");
+
+    const handleSearch = ({ target: { value } }) => {
+        setSearchValue(value)
+    }
+
+    const searchedProducts = searchProducts(searchValue);
+
   return (
     <div className={styles.header}>
         <div className={styles.logo} >
@@ -36,15 +46,29 @@ const Header = () => {
                         name="search" 
                         placeholder="Search for anything..."
                         autoComplete="off"
-                        onChange={() => {}}
-                        value=""    
+                        onChange={handleSearch}
+                        value={searchValue}   
                     />
                 </div>
 
-                {false && <div className={styles.box}>
-                    
-                </div>}
-
+                {searchValue && (<div className={styles.box}>
+                    {!searchedProducts.length ? "No results" : 
+                        searchedProducts.map(({ title, images, id }) => {
+                            return ( 
+                                <Link className={styles.item} to={`/products/${id}`}>
+                                    <div 
+                                        className={styles.image}
+                                        style={{ backgroundImage: `url(${images[0]})`}}
+                                    ></div>
+                                    <div >
+                                        {title}
+                                    </div>
+                                </Link>
+                            );
+                        })}
+                </div>
+                )}
+            
 
             </form>
 

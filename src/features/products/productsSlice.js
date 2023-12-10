@@ -31,6 +31,21 @@ export const getProducts = createAsyncThunk(
     }
 );
 
+const products = data;
+
+export function searchProducts(searchText) {
+    searchText = searchText.toLowerCase(); // Преобразуем текст поиска в нижний регистр для удобства сравнения
+  
+    const results = products.filter(product => {
+      const title = product.title.toLowerCase();
+      const description = product.description.toLowerCase();
+  
+      return title.includes(searchText) || description.includes(searchText);
+    });
+  
+    return results;
+  }
+
 
 const productsSlice = createSlice({
     name: "products",
