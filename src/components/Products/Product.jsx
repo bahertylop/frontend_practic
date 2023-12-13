@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/routes';
 import { useDispatch } from 'react-redux';
 
-import { addItemToCart } from "../../features/user/userSlice";
+import { addItemToCart, addItemToFavourites } from "../../features/user/userSlice";
 
 const SIZES = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5];
 
@@ -25,6 +25,10 @@ const Product = (item) => {
 
     const addToCart = () => {
         dispatch(addItemToCart(item));
+    }
+
+    const addToFavourites = () => {
+        dispatch(addItemToFavourites(item));
     }
 
   return (

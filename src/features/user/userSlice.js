@@ -36,6 +36,7 @@ const userSlice = createSlice({
     initialState: {
         currentUser: [],
         cart: [],
+        favourites: [],
         isLoading: false 
     },
 
@@ -54,7 +55,20 @@ const userSlice = createSlice({
         },
         removeItemFromCart: (state, { payload }) => {
             state.cart = state.cart.filter(({ id }) => id !== payload);
+        },
+        addItemToFavourites:(state, { payload }) => {
+            let newFavourites = [...state.favourites];
+            const found = state.favourites.find(({ id }) => id === payload.id);
+
+            if (!found) {
+                newFavourites.push({ ...payload });
+            }
+        }, 
+        removeItemFromFavourites: (state, { payload }) => {
+            state.favourites = state.favourites.filter(({ id }) => id !== payload);
         }
+
+
 
     }
 
