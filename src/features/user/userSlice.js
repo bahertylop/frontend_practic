@@ -63,6 +63,8 @@ const userSlice = createSlice({
             if (!found) {
                 newFavourites.push({ ...payload });
             }
+
+            state.favourites = newFavourites;
         }, 
         removeItemFromFavourites: (state, { payload }) => {
             state.favourites = state.favourites.filter(({ id }) => id !== payload);
@@ -86,6 +88,6 @@ const userSlice = createSlice({
     // },
 });
 
-export const { addItemToCart, removeItemFromCart} = userSlice.actions;
+export const { addItemToCart, removeItemFromCart, addItemToFavourites, removeItemFromFavourites } = userSlice.actions;
 
 export default userSlice.reducer;

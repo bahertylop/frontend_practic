@@ -28,6 +28,7 @@ const Product = (item) => {
     }
 
     const addToFavourites = () => {
+        console.log(item);
         dispatch(addItemToFavourites(item));
     }
 
@@ -79,12 +80,16 @@ const Product = (item) => {
                 >
                     Add to cart
                 </button>
-                <button className={styles.favourite}>Add to favourites</button>
+                <button 
+                    className={styles.add}
+                    onClick={addToFavourites}
+                >
+                    Add to favourites
+                </button>
                 <button className={styles.favourite}>
                     <Link to={ROUTES.HOME}>Return to store</Link>
                 </button>
             </div>
-            
         </div>
     </section>
   )

@@ -20,7 +20,7 @@ const Home = () => {
         
         <>
             <Sidebar />
-            <Poster />
+            <Poster products={list}/>
             <Categories products={categories.list} amount={3} title="CATEGORIES" />
             <Products products={list} amount={5} title="IN STOCK" />
             <Products products={filtered} amount={5} title="LESS 80$" />

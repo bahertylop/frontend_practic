@@ -13,7 +13,7 @@ const Header = () => {
     const [searchValue, setSearchValue] = useState("");
     const [values, setValues] = useState({ name: "Guest", avatar: AVATAR });
 
-    const { currentUser, cart } = useSelector(( { user }) => user);
+    const { currentUser, cart, favourites } = useSelector(( { user }) => user);
 
     const handleSearch = ({ target: { value } }) => {
         setSearchValue(value)
@@ -82,10 +82,13 @@ const Header = () => {
             </form>
 
             <div className={styles.account}>
-                <Link to={ROUTES.HOME} className={styles.favourites}>
+                <Link to={ROUTES.FAVOURITES} className={styles.cart}>
                     <svg className={styles["icon-fav"]}>
                         <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#heart`} />
                     </svg>
+                    {favourites.length && (
+                        <span className={styles.count}>{favourites.length}</span>
+                    )}
                 </Link>
 
                 <Link to={ROUTES.CART} className={styles.cart}>
