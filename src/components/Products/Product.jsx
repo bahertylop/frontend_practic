@@ -10,7 +10,7 @@ import { addItemToCart, addItemToFavourites } from "../../features/user/userSlic
 const SIZES = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5];
 
 const Product = (item) => {
-    const { images, title, price, description } = item;
+    const { photos, title, price, description } = item;
 
     const dispatch = useDispatch();
 
@@ -18,10 +18,10 @@ const Product = (item) => {
     const [currentSize, setCurrentSize] = useState('');
 
     useEffect(() => {
-        if (!images.length) return;
+        if (!photos.length) return;
 
-        setCurrentImage(images[0]);
-    }, [images])
+        setCurrentImage(photos[0]);
+    }, [photos])
 
     const addToCart = () => {
         dispatch(addItemToCart(item));
@@ -34,12 +34,12 @@ const Product = (item) => {
 
   return (
     <section className={styles.Product}>
-        <div className={styles.images}>
+        <div className={styles.photos}>
             <div 
                 className={styles.current}
                 style={{ backgroundImage: `url(${currentImage})`}}
             />
-            {images.map((image, i) => (
+            {photos.map((image, i) => (
                 <div 
                     key={i}
                     className={styles.image}
