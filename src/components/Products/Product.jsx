@@ -9,7 +9,7 @@ import { addItemToCart, addItemToFavourites } from "../../features/user/userSlic
 
 
 const Product = ({item, sizes}) => {
-    const { photos, title, price, description } = item;
+    const { photos, title, price, description, color } = item;
 
     const dispatch = useDispatch();
 
@@ -35,7 +35,7 @@ const Product = ({item, sizes}) => {
     console.log(sizesArray);
   return (
     <section className={styles.Product}>
-        <div className={styles.photos}>
+        <div className={styles.images}>
             <div 
                 className={styles.current}
                 style={{ backgroundImage: `url(${currentImage})`}}
@@ -55,7 +55,7 @@ const Product = ({item, sizes}) => {
                 <span>Price: </span> {price}$
             </div>
             <div className={styles.color}>
-                <span>Color:</span> Green
+                <span>Color:</span>{color}
             </div>
             <div className={styles.sizes}>
                 <span>Sizes:</span>
