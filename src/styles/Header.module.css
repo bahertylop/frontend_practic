@@ -5,6 +5,19 @@
   padding: 25px 20px;
 }
 
+.loginButton {
+  width: 100px;
+  margin-right: 10px; /* Добавляем отступ справа */
+  display: flex;
+  align-items: center;
+  background: var(--dark);
+  border-radius: 6px;
+  height: 27px;
+  padding: 7px 10px;
+  column-gap: 16px;
+  position: relative;
+}
+
 .logo {
   width: 304px;
 }
@@ -63,6 +76,7 @@
   width: 100%;
   height: 100%;
   fill: var(--dark-sea);
+  margin-right: 10px;
 }
 
 .input {

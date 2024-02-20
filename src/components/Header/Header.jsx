@@ -42,12 +42,19 @@ const Header = () => {
                 <div className={styles.username}>Guest</div>
             </div>  
 
+            {/* Добавление кнопки для авторизации */}
+            <Link to={ROUTES.LOGIN} className={styles.loginButton} >
+                    Login
+                </Link>
+
             <form className={styles.form}>
                 <div className={styles.icon}>
                     <svg className="icon">
                         <use xlinkHref={`${process.env.PIBLIC_URL}/sprite.svg#search`} />
                     </svg>
                 </div>
+
+                
 
                 <div className={styles.input}>
                     <input 

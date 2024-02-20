@@ -3,12 +3,12 @@ import React from 'react';
 import styles from "../../styles/Products.module.css";
 import { Link } from 'react-router-dom'; 
 
-const Products = ({ brand, model, style = {},  products = [], amount }) => {
+const Products = ({ brand, model, style = {},  products = [], amount, title }) => {
     const list = products.filter((_, i) => i < amount);
 
     return (
         <section className={styles.products} style={style}>
-            {brand && <h2>{ brand }</h2>}
+            {title && <h2>{ title }</h2>}
 
             <div className={styles.list}>
                 {products.map(({ id, photos, brand, model, price}) => (

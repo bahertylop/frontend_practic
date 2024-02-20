@@ -6,6 +6,7 @@ import ProductOnly from "../Products/ProductOnly";
 import SingleCategory from "../Categories/SingleCategory";
 import Cart from "../Cart/Cart";
 import Favourites from "../Favourites/Favourites";
+import SignInForm from "../User/SignInForm";
 
 
 const AppRoutes = () => (
@@ -15,6 +16,7 @@ const AppRoutes = () => (
         <Route path={ROUTES.CATEGORY} element={<SingleCategory />} />
         <Route path={ROUTES.CART} element={<Cart />} />
         <Route path={ROUTES.FAVOURITES} element={<Favourites />} />
+        <Route path={ROUTES.LOGIN} element={<SignInForm />} /> 
     </Routes>   
 )
 
