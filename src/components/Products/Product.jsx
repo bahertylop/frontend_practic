@@ -4,17 +4,21 @@ import styles from "../../styles/Product.module.css";
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/routes';
 import { useDispatch } from 'react-redux';
+import axios from 'axios';
 
 import { addItemToCart, addItemToFavourites } from "../../features/user/userSlice";
 
 
 const Product = ({item, sizes}) => {
-    const { photos, title, price, description, color } = item;
+    const { id, photos, title, price, description, color } = item;
+
+
 
     const dispatch = useDispatch();
 
     const [currentImage, setCurrentImage] = useState();
     const [currentSize, setCurrentSize] = useState('');
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         if (!photos.length) return;
@@ -26,9 +30,25 @@ const Product = ({item, sizes}) => {
         dispatch(addItemToCart(item));
     }
 
-    const addToFavourites = () => {
-        console.log(item);
-        dispatch(addItemToFavourites(item));
+    const addToFavourites = async (id) => {
+        try {
+            const response = await fetch('http://localhost:8080/api/favourites/add', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({shoeTypeId: id}),
+            });
+            
+            if (!response.ok) {
+                console.error('Failed to add favourite item');
+                setError('Failed to add favourite item');
+            }
+        } catch (error) {
+            console.error('Error adding favourite item:', error);
+            setError(error.message);
+        }
     }
 
     const sizesArray = Object.values(sizes);
@@ -83,13 +103,15 @@ const Product = ({item, sizes}) => {
                 </button>
                 <button 
                     className={styles.add}
-                    onClick={addToFavourites}
+                    onClick={() => addToFavourites(id)}
                 >
                     Add to favourites
                 </button>
                 <button className={styles.favourite}>
                     <Link to={ROUTES.HOME}>Return to store</Link>
                 </button>
+
+                {error && <div className={styles.action}>Login before</div>}
             </div>
         </div>
     </section>
