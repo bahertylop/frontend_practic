@@ -15,7 +15,7 @@ const Poster = (products = []) => {
                     <div className={styles.subtitle}>the best sneakers of 2023</div>
                     <h1 className={styles.head}>ADIDAS ORIGINALS SAMBA OG</h1>
                     <button className={styles.button}>
-                        <Link to={`/products/6}`} className={styles.button}>
+                        <Link to={`/products/11`} className={styles.button}>
                             Buy now
                         </Link>
                     </button>

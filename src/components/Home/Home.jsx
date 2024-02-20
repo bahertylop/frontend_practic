@@ -16,6 +16,7 @@ const Home = () => {
             }
         }) 
             .then(response => {
+                console.log(response.data);
                 setShoeTypes(response.data.shoeTypes);
                 setCategories(response.data.categories);
             })
