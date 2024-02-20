@@ -1,38 +1,38 @@
-import React, { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { getProduct, getProductById } from '../../features/products/productOnly.js';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import Product from './Product.jsx';
 import Products from './Products.jsx';
-import { getRelatedProducts } from '../../features/products/productsSlice.js';
 
 const ProductOnly = () => {
-    const dispatch = useDispatch();
     const { id } = useParams();
-
-    const navigate = useNavigate();
-
-    const data = getProductById(parseInt(id, 10))
-
-    const { list, related } = useSelector(({ products }) => products);
-    
-    // const { data } = getProduct({ id });
+    const [productData, setProductData] = useState(null);
+    const [relatedProducts, setRelatedProducts] = useState([]);
+    const [sizes, setSizes] = useState([]);
 
     useEffect(() => {
-        if (!data || !list.length) return;
-        if (data) {
-            dispatch(getRelatedProducts(data.category.id));
-        }
-    }, [data, dispatch, list.length]);
+        // Функция для получения данных о продукте по его ID
+        const getProductData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8080/api/products/${id}`);
+                setProductData(response.data.shoeTypeDto);
+                setRelatedProducts(response.data.relatedShoeTypes);
+                setSizes(response.data.sizes);
+            } catch (error) {
+                console.error('Error fetching product data:', error);
+            }
+        };
 
-    console.log(data);
+        // Вызываем функцию для получения данных о продукте
+        getProductData();
+    }, [id]);
 
-    return ( 
+    return (
         <div>
-            <Product {...data} />
-            <Products products={related} amount={5} title="RELATED PRODUCTS" />
+            {productData && <Product item={productData} sizes={sizes} />}
+            {relatedProducts.length > 0 && <Products products={relatedProducts} amount={5} title="RELATED PRODUCTS" />}
         </div>
-    )
-}
+    );
+};
 
-export default ProductOnly
+export default ProductOnly;

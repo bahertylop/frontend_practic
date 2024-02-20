@@ -7,9 +7,8 @@ import { useDispatch } from 'react-redux';
 
 import { addItemToCart, addItemToFavourites } from "../../features/user/userSlice";
 
-const SIZES = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5];
 
-const Product = (item) => {
+const Product = ({item, sizes}) => {
     const { photos, title, price, description } = item;
 
     const dispatch = useDispatch();
@@ -32,6 +31,8 @@ const Product = (item) => {
         dispatch(addItemToFavourites(item));
     }
 
+    const sizesArray = Object.values(sizes);
+    console.log(sizesArray);
   return (
     <section className={styles.Product}>
         <div className={styles.photos}>
@@ -59,7 +60,7 @@ const Product = (item) => {
             <div className={styles.sizes}>
                 <span>Sizes:</span>
                 <div className={styles.list}>
-                    {SIZES.map(size => (
+                    {sizesArray.map(size => (
                         <div
                             onClick={() => setCurrentSize(size)} 
                             key={size}
