@@ -15,12 +15,9 @@ const Cart = () => {
         dispatch(addItemToCart({...item, quantity}));
     };
 
-    const deleteItem = (item) => {
-        dispatch(removeItemFromCart(item.id));
-    };
-
     const [cartPositions, setCartPositions] = useState([]);
     const [auth, setAuth] = useState("");
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         axios.get('http://localhost:8080/api/cart', {
@@ -38,7 +35,10 @@ const Cart = () => {
             console.error("error fetching data:", error);
             setAuth("login to open cart");
         })
-    }, []);
+        .finally(() => {
+            setLoading(false); // Устанавливаем флаг загрузки обратно в false после завершения запроса
+        });
+    }, [loading]);
 
     const deleteFromCart = async (shoeTypeId, size) => {
         try {
@@ -59,6 +59,37 @@ const Cart = () => {
             console.error('Error deleting item:', error);
         }
     };
+
+    const minusQuantity = async (shoeTypeId, size) => {
+        const itemToUpdate = cartPositions.find(item => item.shoeType.id === shoeTypeId && item.size === size);
+        if (!itemToUpdate || itemToUpdate.quantity === 1) return;
+
+        try {
+            const response = await fetch('http://localhost:8080/api/cart/minus', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({shoeTypeId: shoeTypeId, size: size}),
+            }); 
+            if (response.ok) {
+                // setCartPositions(cartPositions.map(item => {
+                //     if (item.shoeType.id === shoeTypeId && item.size === size) {
+                //         return {...item, quantity: item.quantity - 1};
+                //     }
+                //     return item;
+                // }));
+                setLoading(true);
+            } else {
+                console.error('Failed to minus quantity');
+            }
+        } catch (error) {
+            console.error('Error minus quantity:', error);
+        }
+    }
+
+
 
   return (
     <section className={styles.cart}>
@@ -89,7 +120,7 @@ const Cart = () => {
                             <div className={styles.price}>{shoeType.price}$</div>
 
                             <div className={styles.quantity}>
-                                <div className={styles.minus} onClick={() => changeQuantity(item, Math.max(1, quantity - 1))}>
+                                <div className={styles.minus} onClick={() => minusQuantity(shoeType.id, size)}>
                                     <svg className="icon">
                                         <use 
                                             xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#minus`}
