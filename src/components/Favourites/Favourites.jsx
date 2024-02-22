@@ -4,6 +4,7 @@ import styles from '../../styles/Cart.module.css';
 import productsStyles from '../../styles/Favourites.module.css';
 import prStyles from '../../styles/Products.module.css'
 import axios from 'axios';
+import { ROUTES } from '../../utils/routes';
 
 const Favourites = () => {
     const [favourites, setFavourites] = useState([]);
@@ -22,8 +23,10 @@ const Favourites = () => {
             setFavourites(response.data);
         })
         .catch(error => {
+        
             console.error("Error fetching data:", error);
             setAuth("login to open favourites");
+            // window.location.href = ROUTES.LOGIN;
             });
             
         }, []);

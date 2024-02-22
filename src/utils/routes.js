@@ -5,4 +5,5 @@ export const ROUTES = {
     CATEGORY: "/categories/:id",
     PRODUCTS: "/products/:id",
     LOGIN: "/login",
+    SIGNUP: "/signUp",
 }

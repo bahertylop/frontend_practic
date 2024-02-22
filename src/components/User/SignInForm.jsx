@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import Cookies from "js-cookie";
 import styles from "../../styles/User.module.css";
 import { ROUTES } from '../../utils/routes';
+import { Link } from "react-router-dom";
 
 const SignInForm = ({ toggleCurrentFormType, closeForm }) => {
   const dispatch = useDispatch();
@@ -85,12 +86,9 @@ const SignInForm = ({ toggleCurrentFormType, closeForm }) => {
           />
         </div>
 
-        {/* <div
-          onClick={() => toggleCurrentFormType("signup")}
-          className={styles.link}
-        >
-          Create an account
-        </div> */}
+        <Link to={ROUTES.SIGNUP} className={styles.Link} >
+                    Create new account
+                </Link>
 
         <button type="submit" className={styles.submit}>
           Login

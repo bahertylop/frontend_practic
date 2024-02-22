@@ -7,6 +7,7 @@ import SingleCategory from "../Categories/SingleCategory";
 import Cart from "../Cart/Cart";
 import Favourites from "../Favourites/Favourites";
 import SignInForm from "../User/SignInForm";
+import SignUpForm from "../User/SignUpForm";
 
 
 const AppRoutes = () => (
@@ -17,6 +18,7 @@ const AppRoutes = () => (
         <Route path={ROUTES.CART} element={<Cart />} />
         <Route path={ROUTES.FAVOURITES} element={<Favourites />} />
         <Route path={ROUTES.LOGIN} element={<SignInForm />} /> 
+        <Route path={ROUTES.SIGNUP} element={<SignUpForm />} />
     </Routes>   
 )
 
