@@ -17,7 +17,7 @@ const Product = ({item, sizes}) => {
     const dispatch = useDispatch();
 
     const [currentImage, setCurrentImage] = useState();
-    const [currentSize, setCurrentSize] = useState('');
+    const [currentSize, setCurrentSize] = useState(0);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -25,10 +25,6 @@ const Product = ({item, sizes}) => {
 
         setCurrentImage(photos[0]);
     }, [photos])
-
-    const addToCart = () => {
-        dispatch(addItemToCart(item));
-    }
 
     const addToFavourites = async (id) => {
         try {
@@ -49,6 +45,30 @@ const Product = ({item, sizes}) => {
             console.error('Error adding favourite item:', error);
             setError(error.message);
         }
+    }
+
+    const addToCart = async (id, size) => {
+        if (size !== 0) {
+            try {
+                const response = await fetch('http://localhost:8080/api/cart/add', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({shoeTypeId: id, size: size}),
+                });
+                
+                if (!response.ok) {
+                    console.error('Failed to add item to cart');
+                    setError('Failed to add item to cart');
+                }
+            } catch (error) {
+                console.error('Error adding item to cart:', error);
+                setError(error.message);
+            }
+        }
+        
     }
 
     const sizesArray = Object.values(sizes);
@@ -97,7 +117,7 @@ const Product = ({item, sizes}) => {
                 <button 
                     className={styles.add} 
                     disabled={!currentSize}
-                    onClick={addToCart}
+                    onClick={() => addToCart(id, currentSize)}
                 >
                     Add to cart
                 </button>
