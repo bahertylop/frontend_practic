@@ -30,11 +30,11 @@ export const getProducts = createAsyncThunk(
 
 const products = data;
 
-export function searchProducts(searchText) {
+export function searchProducts(shoeTypes, searchText) {
     searchText = searchText.toLowerCase(); // Преобразуем текст поиска в нижний регистр для удобства сравнения
   
-    const results = products.filter(product => {
-      const title = product.title.toLowerCase();
+    const results = shoeTypes.filter(product => {
+      const title = product.brand.toLowerCase() + " " + product.model.toLowerCase();
       const description = product.description.toLowerCase();
   
       return title.includes(searchText) || description.includes(searchText);

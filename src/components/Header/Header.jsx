@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from '../../styles/Header.module.css';
 import { ROUTES } from '../../utils/routes';
 
+import axios from "axios";
 import LOGO from "../../images/logo.svg";
 import AVATAR from "../../images/avatarka.jpg";
 import { searchProducts } from '../../features/products/productsSlice';
@@ -12,7 +13,7 @@ const Header = () => {
 
     const [searchValue, setSearchValue] = useState("");
     const [values, setValues] = useState({ name: "Guest", avatar: AVATAR });
-
+    const [shoeTypes, setShoeTypes] = useState([]);
     const { currentUser, cart, favourites } = useSelector(( { user }) => user);
 
     const handleSearch = ({ target: { value } }) => {
@@ -25,7 +26,18 @@ const Header = () => {
         setValues(currentUser);
       }, [currentUser]);
 
-    const searchedProducts = searchProducts(searchValue);
+    useEffect(() => {
+        axios.get("http://localhost:8080/api/home") 
+            .then(response => {
+                console.log(response.data);
+                setShoeTypes(response.data.shoeTypes);
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+            });
+    }, []);
+
+    const searchedProducts = searchProducts(shoeTypes, searchValue);
 
   return (
     <div className={styles.header}>
@@ -69,23 +81,21 @@ const Header = () => {
 
                 {searchValue && (<div className={styles.box}>
                     {!searchedProducts.length ? "No results" : 
-                        searchedProducts.map(({ title, images, id }) => {
+                        searchedProducts.map(({ brand, model, photos, id }) => {
                             return ( 
                                 <Link className={styles.item} to={`/products/${id}`}>
                                     <div 
                                         className={styles.image}
-                                        style={{ backgroundImage: `url(${images[0]})`}}
+                                        style={{ backgroundImage: `url(${photos[0]})`}}
                                     ></div>
                                     <div >
-                                        {title}
+                                        {brand + " " + model}
                                     </div>
                                 </Link>
                             );
                         })}
                 </div>
                 )}
-            
-
             </form>
 
             <div className={styles.account}>
@@ -112,5 +122,7 @@ const Header = () => {
     </div>
   );
 };
+
+
 
 export default Header;
