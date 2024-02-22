@@ -40,6 +40,26 @@ const Cart = () => {
         })
     }, []);
 
+    const deleteFromCart = async (shoeTypeId, size) => {
+        try {
+            const response = await fetch('http://localhost:8080/api/cart/delete', {
+                method: 'POST', 
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body:JSON.stringify({shoeTypeId: shoeTypeId, size: size}),
+            });
+            if (response.ok) {
+                setCartPositions(cartPositions.filter(item => item.shoeType.id !== shoeTypeId));
+            } else {
+                console.error("Failed to delete item");
+            }
+        } catch (error) {
+            console.error('Error deleting item:', error);
+        }
+    };
+
   return (
     <section className={styles.cart}>
         <h2 className={styles.title}> Your cart </h2>
@@ -88,7 +108,7 @@ const Cart = () => {
                             </div>
                             <div className={styles.total}>{shoeType.price * quantity}$</div>
 
-                            <div className={styles.close} onClick={() => deleteItem(item)}>
+                            <div className={styles.close} onClick={() => deleteFromCart(shoeType.id, size)}>
                                 <svg className="icon">
                                     <use 
                                         xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#close`}
