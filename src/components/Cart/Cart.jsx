@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styles from "../../styles/Cart.module.css";
 import { sumBy } from '../../utils/common';
 import { addItemToCart, removeItemFromCart } from '../../features/user/userSlice';
+import axios from 'axios';
 
 const Cart = () => {
     const dispatch = useDispatch();
 
-    const { cart } = useSelector(( { user }) => user);
-    console.log(cart);
+    // const { cart } = useSelector(( { user }) => user);
+    // console.log(cart);
 
     const changeQuantity = (item, quantity) => {
         dispatch(addItemToCart({...item, quantity}));
@@ -18,29 +19,54 @@ const Cart = () => {
         dispatch(removeItemFromCart(item.id));
     };
 
+    const [cartPositions, setCartPositions] = useState([]);
+    const [auth, setAuth] = useState("");
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/api/cart', {
+            method: 'GET', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            withCredentials: true,
+        })
+        .then(response => {
+            console.log(response.data);
+            setCartPositions(response.data);
+        })
+        .catch(error => {
+            console.error("error fetching data:", error);
+            setAuth("login to open cart");
+        })
+    }, []);
+
   return (
     <section className={styles.cart}>
         <h2 className={styles.title}> Your cart </h2>
 
-        {!cart.length ? (
+        {auth !== "" && (
+                <div className={styles.empty}>Login before</div>
+            )}
+
+        {!cartPositions.length  && auth === "" ? (
             <div className={styles.empty}>Your cart is empty.</div>
         ) : (
             <>
             <div className={styles.list}>
-                {cart.map((item) => {
-                    const { title, category, images, price, id, quantity } = item
+                {cartPositions.map((item) => {
+                    const { shoeType, size, id, quantity } = item
                     return (
                         <div className={styles.item} key={id}>
                             <div 
                                 className={styles.image}
-                                style={{ backgroundImage: `url(${images[0]})`}}
+                                style={{ backgroundImage: `url(${shoeType.photos[0]})`}}
                             />
                             <div className={styles.info}>
-                                <h3 className={styles.name}>{title}</h3>
-                                <div className={styles.category}>{category.name}</div>
+                                <h3 className={styles.name}>{shoeType.brand + " " + shoeType.model}</h3>
+                                <div className={styles.category}>size: {size}</div>
                             </div>
 
-                            <div className={styles.price}>{price}$</div>
+                            <div className={styles.price}>{shoeType.price}$</div>
 
                             <div className={styles.quantity}>
                                 <div className={styles.minus} onClick={() => changeQuantity(item, Math.max(1, quantity - 1))}>
@@ -60,7 +86,7 @@ const Cart = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <div className={styles.total}>{price * quantity}$</div>
+                            <div className={styles.total}>{shoeType.price * quantity}$</div>
 
                             <div className={styles.close} onClick={() => deleteItem(item)}>
                                 <svg className="icon">
@@ -78,7 +104,7 @@ const Cart = () => {
                 <div className={styles.total}>
                     TOTAL PRICE: {" "}
                     <span>
-                        {sumBy(cart.map(({ quantity, price}) => quantity * price))}$
+                        {sumBy(cartPositions.map(({ quantity, shoeType}) => quantity * shoeType.price))}$
                     </span>
                 </div>
 
