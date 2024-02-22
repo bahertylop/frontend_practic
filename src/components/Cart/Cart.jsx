@@ -51,7 +51,8 @@ const Cart = () => {
                 body:JSON.stringify({shoeTypeId: shoeTypeId, size: size}),
             });
             if (response.ok) {
-                setCartPositions(cartPositions.filter(item => item.shoeType.id !== shoeTypeId));
+                // setCartPositions(cartPositions.filter(item => item.shoeType.id !== shoeTypeId));
+                setLoading(true);
             } else {
                 console.error("Failed to delete item");
             }
@@ -74,18 +75,32 @@ const Cart = () => {
                 body: JSON.stringify({shoeTypeId: shoeTypeId, size: size}),
             }); 
             if (response.ok) {
-                // setCartPositions(cartPositions.map(item => {
-                //     if (item.shoeType.id === shoeTypeId && item.size === size) {
-                //         return {...item, quantity: item.quantity - 1};
-                //     }
-                //     return item;
-                // }));
                 setLoading(true);
             } else {
                 console.error('Failed to minus quantity');
             }
         } catch (error) {
             console.error('Error minus quantity:', error);
+        }
+    }
+
+    const plusQuantity = async (shoeTypeId, size) => {
+        try {
+            const response = await fetch('http://localhost:8080/api/cart/plus', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({shoeTypeId: shoeTypeId, size: size}),
+            }); 
+            if (response.ok) {
+                setLoading(true);
+            } else {
+                console.error('Failed to plus quantity');
+            }
+        } catch (error) {
+            console.error('Error plus quantity:', error);
         }
     }
 
@@ -129,7 +144,7 @@ const Cart = () => {
                                 </div>
 
                                 <span>{quantity}</span>
-                                <div className={styles.plus} onClick={() => changeQuantity(item, Math.min(1000, quantity + 1))}>
+                                <div className={styles.plus} onClick={() => plusQuantity(shoeType.id, size)}>
                                     <svg className="icon">
                                         <use 
                                             xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#plus`}
