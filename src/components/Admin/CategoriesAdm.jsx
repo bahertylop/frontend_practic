@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../../styles/Cart.module.css";
 import axios from 'axios';
+import { ROUTES } from '../../utils/routes';
 
 const CategoriesAdm = () => {
     const [categories, setCategories] = useState([]);
@@ -23,8 +24,10 @@ const CategoriesAdm = () => {
             setCategories(response.data);
         })
         .catch(error => {
+            // window.location.href = ROUTES.HOME;
             console.error("error fetching data:", error);
             setAuth("login to adm to open this page");
+            
         })
         .finally(() => {
             setLoading(false); // Устанавливаем флаг загрузки обратно в false после завершения запроса
@@ -69,7 +72,7 @@ const CategoriesAdm = () => {
                 console.error(response.text());
             }
         } catch (error) {
-            console.error('Error adding cateory:', error);
+            console.error('Error adding category:', error);
         }
     };
 
@@ -78,7 +81,7 @@ const CategoriesAdm = () => {
         <h2 className={styles.title}> Categories panel </h2>
 
         {auth !== "" && (
-                <div className={styles.empty}>Login before</div>
+                <div className={styles.empty}>Forbidden (only for adm)</div>
             )}
 
         {!categories.length  && auth === "" ? (
