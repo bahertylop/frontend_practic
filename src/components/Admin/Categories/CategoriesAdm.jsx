@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import styles from "../../styles/Cart.module.css";
+import styles from "../../../styles/Cart.module.css";
 import axios from 'axios';
-import { ROUTES } from '../../utils/routes';
+import { ROUTES } from '../../../utils/routes';
 import { Link } from 'react-router-dom';
 
 const CategoriesAdm = () => {
