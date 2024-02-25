@@ -10,6 +10,7 @@ import SignInForm from "../User/SignInForm";
 import SignUpForm from "../User/SignUpForm";
 import CategoriesAdm from "../Admin/Categories/CategoriesAdm";
 import TypesAdm from "../Admin/Products/TypesAdm";
+import UsersAdm from "../Admin/Users/UsersAdm";
 
 
 const AppRoutes = () => (
@@ -23,6 +24,7 @@ const AppRoutes = () => (
         <Route path={ROUTES.SIGNUP} element={<SignUpForm />} />
         <Route path={ROUTES.CATEGORIESADM} element={<CategoriesAdm />} />
         <Route path={ROUTES.TYPESADM} element={<TypesAdm />} />
+        <Route path={ROUTES.USERSADM} element={<UsersAdm />} />
     </Routes>   
 )
 

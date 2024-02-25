@@ -8,4 +8,5 @@ export const ROUTES = {
     SIGNUP: "/signUp",
     CATEGORIESADM: "adm/categories/all",
     TYPESADM: "adm/types/all",
+    USERSADM: "adm/users/all",
 }

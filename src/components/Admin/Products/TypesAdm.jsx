@@ -122,7 +122,6 @@ const TypesAdm = () => {
 
         <button className={styles.proceed} onClick={() => {
                 setInStock(!typesInStock);
-                console.log(typesInStock);
             }}>inStock: {typesInStock}</button>
 
         {!products.length  && auth === "" ? (
