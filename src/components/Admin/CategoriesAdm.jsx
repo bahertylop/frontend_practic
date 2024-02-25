@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from "../../styles/Cart.module.css";
 import axios from 'axios';
 import { ROUTES } from '../../utils/routes';
+import { Link } from 'react-router-dom';
 
 const CategoriesAdm = () => {
     const [categories, setCategories] = useState([]);
@@ -88,19 +89,21 @@ const CategoriesAdm = () => {
             <div className={styles.empty}>No categories</div>
         ) : (
             <>
-            <div className={styles.list}>
+            <div className={styles.list}> 
                 {categories.map((item) => {
                     const { id, name, image } = item
                     return (
+                        
                         <div className={styles.item} key={id}>
                             <div 
                                 className={styles.image}
                                 style={{ backgroundImage: `url(${image})`}}
                             />
+                            <Link to={`/categories/${id}`} key={id}>
                             <div className={styles.info}>
                                 <h3 className={styles.name}>{name}</h3>
                             </div>
-
+                            </Link>
                             <div className={styles.close} onClick={() => deleteCategory(name)}>
                                 <svg className="icon">
                                     <use 
