@@ -8,6 +8,7 @@ import Cart from "../Cart/Cart";
 import Favourites from "../Favourites/Favourites";
 import SignInForm from "../User/SignInForm";
 import SignUpForm from "../User/SignUpForm";
+import CategoriesAdm from "../Admin/CategoriesAdm";
 
 
 const AppRoutes = () => (
@@ -19,6 +20,7 @@ const AppRoutes = () => (
         <Route path={ROUTES.FAVOURITES} element={<Favourites />} />
         <Route path={ROUTES.LOGIN} element={<SignInForm />} /> 
         <Route path={ROUTES.SIGNUP} element={<SignUpForm />} />
+        <Route path={ROUTES.CATEGORIESADM} element={<CategoriesAdm />} />
     </Routes>   
 )
 

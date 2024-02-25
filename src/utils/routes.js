@@ -6,4 +6,5 @@ export const ROUTES = {
     PRODUCTS: "/products/:id",
     LOGIN: "/login",
     SIGNUP: "/signUp",
+    CATEGORIESADM: "adm/categories/all",
 }

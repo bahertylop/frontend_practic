@@ -29,7 +29,7 @@ const Home = () => {
         <>
             <Sidebar categories={categories}/>
             <Poster products={shoeTypes} />
-            <Categories products={categories} amount={3} title="CATEGORIES" />
+            <Categories products={categories} title="CATEGORIES" />
             <Products products={shoeTypes} amount={5} title="IN STOCK" />
         </>
     );
