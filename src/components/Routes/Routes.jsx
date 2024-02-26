@@ -11,6 +11,7 @@ import SignUpForm from "../User/SignUpForm";
 import CategoriesAdm from "../Admin/Categories/CategoriesAdm";
 import TypesAdm from "../Admin/Products/TypesAdm";
 import UsersAdm from "../Admin/Users/UsersAdm";
+import TypeOnlyAdm from "../Admin/Products/TypeOnlyAdm";
 
 
 const AppRoutes = () => (
@@ -25,6 +26,7 @@ const AppRoutes = () => (
         <Route path={ROUTES.CATEGORIESADM} element={<CategoriesAdm />} />
         <Route path={ROUTES.TYPESADM} element={<TypesAdm />} />
         <Route path={ROUTES.USERSADM} element={<UsersAdm />} />
+        <Route path={ROUTES.TYPEONLYADM} element={<TypeOnlyAdm />} />
     </Routes>   
 )
 

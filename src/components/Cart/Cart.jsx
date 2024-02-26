@@ -7,10 +7,6 @@ import axios from 'axios';
 
 const Cart = () => {
     const dispatch = useDispatch();
-
-    // const { cart } = useSelector(( { user }) => user);
-    // console.log(cart);
-
     const changeQuantity = (item, quantity) => {
         dispatch(addItemToCart({...item, quantity}));
     };

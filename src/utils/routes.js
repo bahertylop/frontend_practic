@@ -9,4 +9,5 @@ export const ROUTES = {
     CATEGORIESADM: "adm/categories/all",
     TYPESADM: "adm/types/all",
     USERSADM: "adm/users/all",
+    TYPEONLYADM: "adm/types/:id",
 }
