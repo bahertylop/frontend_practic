@@ -194,7 +194,7 @@ const TypeOnlyAdm = () => {
                 }}>
     
                     
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>brand: 
                     <input
                         type="text"
                         placeholder="brand"
@@ -203,7 +203,7 @@ const TypeOnlyAdm = () => {
                         
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>model: 
                     <input
                         type="text"
                         placeholder="model"
@@ -212,7 +212,7 @@ const TypeOnlyAdm = () => {
                         
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>category id:
                     <input
                         type="number"
                         placeholder="categoryId"
@@ -221,7 +221,7 @@ const TypeOnlyAdm = () => {
                         
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>color:
                     <input
                         type="text"
                         placeholder="color"
@@ -230,7 +230,7 @@ const TypeOnlyAdm = () => {
                         
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>description:
                     <input
                         type="text"
                         placeholder="description"
@@ -239,7 +239,7 @@ const TypeOnlyAdm = () => {
                     
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>price:
                     <input
                         type="number"
                         placeholder="price"
@@ -248,7 +248,7 @@ const TypeOnlyAdm = () => {
                     
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>photo 1:
                     <input
                         type="text"
                         placeholder="photo1 URL"
@@ -257,7 +257,7 @@ const TypeOnlyAdm = () => {
                     
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>photo 2:
                     <input
                         type="text"
                         placeholder="photo2 URL"
@@ -266,7 +266,7 @@ const TypeOnlyAdm = () => {
                     
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>photo 3:
                     <input
                         type="text"
                         placeholder="photo3 URL"
@@ -275,7 +275,7 @@ const TypeOnlyAdm = () => {
                     
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>photo 4:
                     <input
                         type="text"
                         placeholder="photo4 URL"
@@ -284,7 +284,7 @@ const TypeOnlyAdm = () => {
                     
                     />
                     </div>
-                    <div className={styles2.group}>
+                    <div className={styles2.group}>photo 5:
                     <input
                         type="text"
                         placeholder="photo5 URL"
@@ -293,7 +293,37 @@ const TypeOnlyAdm = () => {
                     
                     />
                     </div>
-                    <button type="submit">Add Category</button>
+                    <button type="submit">Update info</button>
+                </form>
+
+                <div className={styles2.title}>Add pairs</div>
+                
+                <form className={styles2.form} onSubmit={(e) => {
+                    e.preventDefault();
+                    addNewPairs(quantity, size);
+                }}>
+    
+                    
+                    <div className={styles2.group}>quantity: 
+                    <input
+                        type="number"
+                        placeholder="quantity"
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
+                        
+                    />
+                    </div>
+                    <div className={styles2.group}>size:
+                    <input
+                        type="number"
+                        placeholder="size"
+                        value={size}
+                        onChange={(e) => setSize(e.target.value)}
+                        
+                    />
+                    </div>
+                    
+                    <button type="submit">Add Pairs</button>
                 </form>
     
             </section>
