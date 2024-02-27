@@ -138,7 +138,7 @@ const TypesAdm = () => {
                                 className={styles.image}
                                 style={{ backgroundImage: `url(${photos[0]})`}}
                             />
-                            <Link to={`/products/${id}`} key={id}>
+                            <Link to={`${id}`} key={id}>
                             <div className={styles.info}>
                                 <h3 className={styles.name}>{brand + " " + model}</h3>
                                 <div className={styles.category}>{color}</div>

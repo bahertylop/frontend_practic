@@ -7,7 +7,7 @@ export const ROUTES = {
     LOGIN: "/login",
     SIGNUP: "/signUp",
     CATEGORIESADM: "adm/categories/all",
-    TYPESADM: "adm/types/all",
+    TYPESADM: "adm/types/",
     USERSADM: "adm/users/all",
     TYPEONLYADM: "adm/types/:id",
 }
