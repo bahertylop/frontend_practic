@@ -4,6 +4,8 @@ import styles from "../../styles/Cart.module.css";
 import { sumBy } from '../../utils/common';
 import { addItemToCart, removeItemFromCart } from '../../features/user/userSlice';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../utils/routes';
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -170,7 +172,8 @@ const Cart = () => {
                     </span>
                 </div>
 
-                <button className={styles.proceed}> Buy Now </button>
+                
+                <Link className={styles.proceed} to={ROUTES.ORDER}> Buy Now </Link>
             </div>
             </>
         )}

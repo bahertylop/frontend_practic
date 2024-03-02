@@ -12,8 +12,6 @@ import { addItemToCart, addItemToFavourites } from "../../features/user/userSlic
 const Product = ({item, sizes}) => {
     const { id, photos, title, price, description, color } = item;
 
-
-
     const dispatch = useDispatch();
 
     const [currentImage, setCurrentImage] = useState();
