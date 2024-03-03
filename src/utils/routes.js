@@ -11,4 +11,5 @@ export const ROUTES = {
     USERSADM: "adm/users/all",
     TYPEONLYADM: "adm/types/:id",
     ORDER: "/order",
+    PROFILE: "/profile",
 }

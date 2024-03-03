@@ -50,8 +50,9 @@ const Header = () => {
 
         <div className={styles.info}> 
             <div className={styles.user}>
-                <div className={styles.avatar} style={{ backgroundImage: `url(${AVATAR})` }}/>
-                <div className={styles.username}>Guest</div>
+                {/* <div className={styles.avatar} style={{ backgroundImage: `url(${AVATAR})` }}/> */}
+                <Link to={ROUTES.PROFILE} className={styles.username}>Guest</Link>
+                {/* <div className={styles.username}>Guest</div> */}
             </div>  
 
             {/* Добавление кнопки для авторизации */}

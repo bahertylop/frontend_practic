@@ -63,6 +63,12 @@
   line-height: 16px;
 }
 
+.name2 {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 12px; /* Добавляем 8px нижнего margin */
+}
 .category {
   font-size: 10px;
   line-height: 12px;

@@ -13,6 +13,7 @@ import TypesAdm from "../Admin/Products/TypesAdm";
 import UsersAdm from "../Admin/Users/UsersAdm";
 import TypeOnlyAdm from "../Admin/Products/TypeOnlyAdm";
 import Order from "../Order/Order";
+import Profile from "../User/Profile";
 
 
 const AppRoutes = () => (
@@ -29,6 +30,7 @@ const AppRoutes = () => (
         <Route path={ROUTES.USERSADM} element={<UsersAdm />} />
         <Route path={ROUTES.TYPEONLYADM} element={<TypeOnlyAdm />} />
         <Route path={ROUTES.ORDER} element={<Order />} />
+        <Route path={ROUTES.PROFILE} element={<Profile />} />
     </Routes>   
 )
 
