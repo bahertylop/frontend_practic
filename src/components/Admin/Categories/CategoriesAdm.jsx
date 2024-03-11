@@ -21,7 +21,7 @@ const CategoriesAdm = () => {
             withCredentials: true,
         })
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             setCategories(response.data);
         })
         .catch(error => {

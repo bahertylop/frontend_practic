@@ -21,7 +21,7 @@ const Profile = () => {
             withCredentials: true,
         })
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             setAccount(response.data.accountDto);
             setOrders(response.data.orders);
         })

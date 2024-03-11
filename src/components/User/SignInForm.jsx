@@ -34,11 +34,11 @@ const SignInForm = ({ toggleCurrentFormType, closeForm }) => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         
         // Записываем токен в cookie
         Cookies.set("token", data.token);
-        console.log(data.token);
+        // console.log(data.token);
         // Переход на /home
         window.location.href = ROUTES.HOME;
       } else {

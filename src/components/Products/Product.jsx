@@ -70,7 +70,7 @@ const Product = ({item, sizes}) => {
     }
 
     const sizesArray = Object.values(sizes);
-    console.log(sizesArray);
+    // console.log(sizesArray);
   return (
     <section className={styles.Product}>
         <div className={styles.images}>

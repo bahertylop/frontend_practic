@@ -31,7 +31,7 @@ const Order = () => {
             withCredentials: true,
         })
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             setCartPositions(response.data.cart);
             setAddresses(response.data.addresses);
             setCards(response.data.cards);

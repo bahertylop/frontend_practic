@@ -26,7 +26,7 @@ const Cart = () => {
             withCredentials: true,
         })
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             setCartPositions(response.data);
         })
         .catch(error => {

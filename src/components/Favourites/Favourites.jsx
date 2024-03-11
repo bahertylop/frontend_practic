@@ -19,7 +19,7 @@ const Favourites = () => {
             withCredentials: true,
         })
         .then(response => {
-            console.log(response.data)
+            // console.log(response.data);
             setFavourites(response.data);
         })
         .catch(error => {

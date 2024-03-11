@@ -20,7 +20,7 @@ const UsersAdm = () => {
             withCredentials: true,
         })
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             setUsers(response.data);
         })
         .catch(error => {
@@ -71,13 +71,13 @@ const UsersAdm = () => {
 
     const changeAccountRole = async (role, email) => {
         var url = "";
-        console.log(role + " " + email);
+        // console.log(role + " " + email);
         if (role === ROLES.USER) {
             url = "http://localhost:8080/api/adm/users/takeUser";
         } else if (role === ROLES.ADMIN) {
             url = "http://localhost:8080/api/adm/users/takeAdmin";
         }
-        console.log(url);
+        // console.log(url);
         if (url !== "") {
             try {
                 const response = await fetch(url, {

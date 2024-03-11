@@ -29,7 +29,7 @@ const Header = () => {
     useEffect(() => {
         axios.get("http://localhost:8080/api/home") 
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setShoeTypes(response.data.shoeTypes);
             })
             .catch(error => {

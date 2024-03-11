@@ -46,7 +46,7 @@ const TypeOnlyAdm = () => {
             withCredentials: true,
         })
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             setProduct(response.data.shoeTypeDto);
             setSizes(response.data.sizes);
         })

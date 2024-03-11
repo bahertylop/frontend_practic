@@ -40,7 +40,7 @@ const SignUpForm = ({ toggleCurrentFormType, closeForm }) => {
       if (response.ok) {
         window.location.href = ROUTES.LOGIN;
       } else {
-        console.log("SignUp failed");
+        console.error("SignUp failed");
         setIsOk("email used");
       }
     } catch (error) {

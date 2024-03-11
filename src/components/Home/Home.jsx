@@ -11,12 +11,10 @@ const Home = () => {
 
     useEffect(() => {
         axios.get("http://localhost:8080/api/home", {
-            headers: {
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZXZrYTMyMDhAZ21haWwuY29tIiwiaWF0IjoxNzA4Mzc0OTk1LCJleHAiOjE3MDg0NzQ5OTV9.eWnQjzWx_5q9nwMoCg4cNv1N9rbJ8e9G0UEkfPCFFCI'
-            }
+            
         }) 
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setShoeTypes(response.data.shoeTypes);
                 setCategories(response.data.categories);
             })
