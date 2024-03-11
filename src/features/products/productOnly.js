@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from 'axios'
 
-import data from "./products.json"
+// import data from "./products.json"
 import {ROUTES} from "../../utils/routes";
 
 

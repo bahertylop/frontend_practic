@@ -1,0 +1,332 @@
+    [
+        {
+            "id": 1,
+            "title": "adidas Originals FORUM LOW",
+            "price": 100,
+            "description": "Кроссовки выполнены из комбинации натуральной и искусственной кожи. Детали: махровая подкладка, трикотажная стелька, резиновая подметка.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705726_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705727_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705728_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705729_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLAAN029801_14705730_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T13:28:13.000Z",
+            "updatedAt": "2023-11-29T16:02:21.000Z",
+            "category": {
+                "id": 1,
+                "name": "Sneakers",
+                "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 2,
+            "title": "adidas Originals NITEBALL",
+            "price": 200,
+            "description": "Кроссовки adidas Niteball выполнены из сочетания натуральной кожи и текстиля.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651712_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651713_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651714_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651715_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADA449601_21651716_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T15:37:49.000Z",
+            "updatedAt": "2023-11-29T16:02:36.000Z",
+            "category": {
+                "id": 1,
+                "name": "Sneakers",
+                "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 3,
+            "title": "adidas Originals OZTRAL",
+            "price": 180,
+            "description": "Натуральная замша, текстиль",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788728_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788729_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788730_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788731_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY193002_21788732_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T15:44:35.000Z",
+            "updatedAt": "2023-11-29T16:03:00.000Z",
+            "category": {
+                "id": 1,
+                "name": "Sneakers",
+                "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 4,
+            "title": "adidas Originals NMD_S1",
+            "price": 160,
+            "description": "Продолжай традиции NMD в этих кроссовках adidas NMD_R1.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272440_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272441_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272442_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272443_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272444_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 1,
+                "name": "Sneakers",
+                "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 5,
+            "title": "adidas Originals RESPONSE CL",
+            "price": 110,
+            "description": "Кроссовки выполнены из натуральной кожи и текстиля. Детали: амортизация adiPRENE, технология Torsion для дополнительной стабилизации, текстильная подкладка, классическая шнуровка.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW376801_21441308_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW376801_21441309_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272442_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272443_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACW657801_21272444_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 1,
+                "name": "Sneakers",
+                "image": "https://www.yoox.com/images/items/17/17774607KV_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 6,
+            "title": "adidas Originals SAMBA OG",
+            "price": 150,
+            "description": "Кеды выполнены из натуральной кожи с замшевыми накладками. Детали: классическая шнуровка, текстильная внутренняя отделка и стелька, резиновая чашечная подошва.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY244601_21700462_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY244601_21700463_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY244601_21700464_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY244601_21700465_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY244601_21700466_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 2,
+                "name": "Gumshoes",
+                "image": "https://www.yoox.com/images/items/17/17749297QG_14_f.jpg?impolicy=crop&amp;width=387&amp;height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 7,
+            "title": "adidas Originals STAN SMITH",
+            "price": 100,
+            "description": "Натуральная кожа, текстиль",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACZ075001_21737657_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACZ075001_21737658_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACZ075001_21737659_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACZ075001_21737660_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACZ075001_21737661_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 2,
+                "name": "Gumshoes",
+                "image": "https://www.yoox.com/images/items/17/17749297QG_14_f.jpg?impolicy=crop&amp;width=387&amp;height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 8,
+            "title": "adidas Originals GAZELLE",
+            "price": 150,
+            "description": "Лаконичный дизайн этих кед от adidas Originals, впервые выпущенных в 1968 году, органично дополняет и современный образ. Модель возрождает аутентичный стиль версии 1991-го года в архивных цветах и с оригинальными деталями. Кеды выполнены из натуральной замши. Детали: шнуровка, текстильная подкладка и стелька, резиновая подошва. Трилистник на язычке и пятке.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY178401_21569700_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY178401_21569701_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY178401_21569702_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY178401_21569703_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACY178401_21569704_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 2,
+                "name": "Gumshoes",
+                "image": "https://www.yoox.com/images/items/17/17749297QG_14_f.jpg?impolicy=crop&amp;width=387&amp;height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 9,
+            "title": "adidas Originals SUPERSTAR XLG",
+            "price": 160,
+            "description": "Кеды выполнены из натуральной кожи. Удобная и функциональная стелька OrthoLite® с антимикробным покрытием. Классический резиновый мысок-ракушка. Детали: внутренняя отделка и стелька из текстиля, резиновая подошва, перфорация.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACX004502_21771022_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACX004502_21771023_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACX004502_21771024_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACX004502_21771025_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACX004502_21771026_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 2,
+                "name": "Gumshoes",
+                "image": "https://www.yoox.com/images/items/17/17749297QG_14_f.jpg?impolicy=crop&amp;width=387&amp;height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 10,
+            "title": "adidas Originals RIVALRY LOW",
+            "price": 105,
+            "description": "Искусственная кожа, натуральная кожа",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV062001_21321652_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV062001_21321653_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV062001_21321654_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV062001_21321655_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV062001_21321656_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 2,
+                "name": "Gumshoes",
+                "image": "https://www.yoox.com/images/items/17/17749297QG_14_f.jpg?impolicy=crop&amp;width=387&amp;height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 11,
+            "title": "adidas Originals adiFOM SUPERSTAR",
+            "price": 120,
+            "description": "Обувь adidas Superstar входит в метаверсу, благодаря этому уникальному воплощению силуэта “shell-toe”. Для создания этого единственного в своем роде дизайна используется вспененный материал, частично изготовленный из сахарного тростника. Сделайте шаг в авангард устойчивого развития и будущего моды. Эта обувь выполнена из натуральных и возобновляемых материалов, как часть нашего пути к разработке дизайна из ограниченных ресурсов и помощи в прекращении пластиковых отходов.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADC656201_21779018_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADC656201_21779027_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADC656201_21779029_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADC656201_21779033_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLADC656201_21779036_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 3,
+                "name": "Slates",
+                "image": "https://www.yoox.com/images/items/11/11096351MG_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 12,
+            "title": "adidas Originals ADILETTE 22",
+            "price": 68,
+            "description": "Обувь adidas Superstar входит в метаверсу, благодаря этому уникальному воплощению силуэта “shell-toe”. Для создания этого единственного в своем роде дизайна используется вспененный материал, частично изготовленный из сахарного тростника. Сделайте шаг в авангард устойчивого развития и будущего моды. Эта обувь выполнена из натуральных и возобновляемых материалов, как часть нашего пути к разработке дизайна из ограниченных ресурсов и помощи в прекращении пластиковых отходов.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV904502_21733226_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV904502_21733227_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV904502_21733228_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV904502_21733229_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV904502_21733230_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 3,
+                "name": "Slates",
+                "image": "https://www.yoox.com/images/items/11/11096351MG_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 13,
+            "title": "adidas Originals ADILETTE",
+            "price": 30,
+            "description": "Классические сланцы Adidas Originals выполнены из качественного износостойкого материала. Детали: рельефная резиновая подошва, декор из трех контрастных полос в виде символики бренда.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/A/D/AD093AMBL190_275624_1_v3.jpg",
+                "https://a.lmcdn.ru/img600x866/A/D/AD093AMBL190_275625_2_v3.jpg",
+                "https://a.lmcdn.ru/img600x866/A/D/AD093AMBL190_275626_3_v3.jpg",
+                "https://a.lmcdn.ru/img600x866/A/D/AD093AMBL190_275627_4_v3.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACV904502_21733230_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 3,
+                "name": "Slates",
+                "image": "https://www.yoox.com/images/items/11/11096351MG_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 14,
+            "title": "adidas Originals ADILETTE BOOST",
+            "price": 40,
+            "description": "Сланцы выполнены из полимерного материала. Модель имеет полноразмерную межподошву с возвратом энергии, которая поддерживает стопу и обеспечивает превосходную амортизацию. Классические 3 полоски на верхней части в стиле бандажа подчеркивают стиль adidas.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACB524201_18215428_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACB524201_18215429_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACB524201_18215430_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACB524201_18215431_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACB524201_18215432_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 3,
+                "name": "Slates",
+                "image": "https://www.yoox.com/images/items/11/11096351MG_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        },
+        {
+            "id": 15,
+            "title": "adidas Originals ADILETTE",
+            "price": 40,
+            "description": "Сланцы выполнены из полимерного материала. Модель имеет полноразмерную межподошву с возвратом энергии, которая поддерживает стопу и обеспечивает превосходную амортизацию. Классические 3 полоски на верхней части в стиле бандажа подчеркивают стиль adidas.",
+            "images": [
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACA203201_18086651_1_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACA203201_18086652_2_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACA203201_18086653_3_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACA203201_18086654_4_v1.jpg",
+                "https://a.lmcdn.ru/img600x866/R/T/RTLACA203201_18086655_5_v1.jpg"
+            ],
+            "creationAt": "2023-11-29T17:16:58.000Z",
+            "updatedAt": "2023-11-29T17:16:58.000Z",
+            "category": {
+                "id": 3,
+                "name": "Slates",
+                "image": "https://www.yoox.com/images/items/11/11096351MG_14_f.jpg?impolicy=crop&width=387&height=490",
+                "creationAt": "2023-11-29T10:18:48.000Z",
+                "updatedAt": "2023-11-29T10:18:48.000Z"
+            }
+        }
+    ]
