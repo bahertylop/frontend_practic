@@ -120,10 +120,13 @@ const TypesAdm = () => {
                 <div className={styles.empty}>Forbidden (only for adm)</div>
             )}
 
-        <button className={styles.proceed} onClick={() => {
+        {auth === "" && (
+            <button className={styles.proceed} onClick={() => {
                 setInStock(!typesInStock);
             }}>inStock: {typesInStock}</button>
 
+        )}
+        
         {!products.length  && auth === "" ? (
             <div className={styles.empty}>No types</div>
         ) : (
@@ -160,116 +163,121 @@ const TypesAdm = () => {
             </>
         )}
 
+        {auth === "" && (
+            <>
+            <div className={styles2.title}>New type</div>
         
-        <div className={styles2.title}>New type</div>
-        
-        <form className={styles2.form} onSubmit={(e) => {
-            e.preventDefault();
-            addType(brandInput, modelInput, descriptionInput, colorInput, priceInput, photo_1, photo_2, photo_3, photo_4, photo_5, categoryIdInput);
-        }}>
+            <form className={styles2.form} onSubmit={(e) => {
+                e.preventDefault();
+                addType(brandInput, modelInput, descriptionInput, colorInput, priceInput, photo_1, photo_2, photo_3, photo_4, photo_5, categoryIdInput);
+            }}>
+    
+                
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="brand"
+                    value={brandInput}
+                    onChange={(e) => setBrandInput(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="model"
+                    value={modelInput}
+                    onChange={(e) => setModelInput(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="number"
+                    placeholder="categoryId"
+                    value={categoryIdInput}
+                    onChange={(e) => setCategoryIdInput(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="color"
+                    value={colorInput}
+                    onChange={(e) => setColorInput(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="description"
+                    value={descriptionInput}
+                    onChange={(e) => setDescriptionInput(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="number"
+                    placeholder="price"
+                    value={priceInput}
+                    onChange={(e) => setPriceInput(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="photo1 URL"
+                    value={photo_1}
+                    onChange={(e) => setPhoto1Input(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="photo2 URL"
+                    value={photo_2}
+                    onChange={(e) => setPhoto2Input(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="photo3 URL"
+                    value={photo_3}
+                    onChange={(e) => setPhoto3Input(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="photo4 URL"
+                    value={photo_4}
+                    onChange={(e) => setPhoto4Input(e.target.value)}
+                    required
+                />
+                </div>
+                <div className={styles2.group}>
+                <input
+                    type="text"
+                    placeholder="photo5 URL"
+                    value={photo_5}
+                    onChange={(e) => setPhoto5Input(e.target.value)}
+                    required
+                />
+                </div>
+                <button type="submit">Add Category</button>
+            </form>
+            </>
+        )} 
 
-            
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="brand"
-                value={brandInput}
-                onChange={(e) => setBrandInput(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="model"
-                value={modelInput}
-                onChange={(e) => setModelInput(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="number"
-                placeholder="categoryId"
-                value={categoryIdInput}
-                onChange={(e) => setCategoryIdInput(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="color"
-                value={colorInput}
-                onChange={(e) => setColorInput(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="description"
-                value={descriptionInput}
-                onChange={(e) => setDescriptionInput(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="number"
-                placeholder="price"
-                value={priceInput}
-                onChange={(e) => setPriceInput(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="photo1 URL"
-                value={photo_1}
-                onChange={(e) => setPhoto1Input(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="photo2 URL"
-                value={photo_2}
-                onChange={(e) => setPhoto2Input(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="photo3 URL"
-                value={photo_3}
-                onChange={(e) => setPhoto3Input(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="photo4 URL"
-                value={photo_4}
-                onChange={(e) => setPhoto4Input(e.target.value)}
-                required
-            />
-            </div>
-            <div className={styles2.group}>
-            <input
-                type="text"
-                placeholder="photo5 URL"
-                value={photo_5}
-                onChange={(e) => setPhoto5Input(e.target.value)}
-                required
-            />
-            </div>
-            <button type="submit">Add Category</button>
-        </form>
+        
         
 
     </section>
