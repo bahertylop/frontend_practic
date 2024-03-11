@@ -77,6 +77,8 @@ const CategoriesAdm = () => {
         }
     };
 
+    console.log(auth);
+
   return (
     <section className={styles.cart}>
         <h2 className={styles.title}> Categories panel </h2>
@@ -88,7 +90,7 @@ const CategoriesAdm = () => {
         {!categories.length  && auth === "" ? (
             <div className={styles.empty}>No categories</div>
         ) : (
-            <>
+            <> 
             <div className={styles.list}> 
                 {categories.map((item) => {
                     const { id, name, image } = item
@@ -115,27 +117,33 @@ const CategoriesAdm = () => {
                     );
                 })}
             </div>
+
+                
             </>
+
+            
         )}
 
-        <form onSubmit={(e) => {
-            e.preventDefault();
-            addCategory(nameInput, imageInput);
-        }}>
-            <input
-                type="text"
-                placeholder="Category Name"
-                value={nameInput}
-                onChange={(e) => setNameInput(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Image URL"
-                value={imageInput}
-                onChange={(e) => setImageInput(e.target.value)}
-            />
-            <button type="submit">Add Category</button>
-        </form>
+        {auth === "" && (<form onSubmit={(e) => {
+                    e.preventDefault();
+                    addCategory(nameInput, imageInput);
+                }}>
+                    <input
+                        type="text"
+                        placeholder="Category Name"
+                        value={nameInput}
+                        onChange={(e) => setNameInput(e.target.value)}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Image URL"
+                        value={imageInput}
+                        onChange={(e) => setImageInput(e.target.value)}
+                    />
+                    <button type="submit">Add Category</button>
+                </form>)} 
+        
+        
 
     </section>
   )
