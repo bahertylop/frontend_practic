@@ -38,6 +38,7 @@ const Product = ({item, sizes}) => {
             if (!response.ok) {
                 console.error('Failed to add favourite item');
                 setError('Failed to add favourite item');
+                console.log(response);
             }
         } catch (error) {
             console.error('Error adding favourite item:', error);
